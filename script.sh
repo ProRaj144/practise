@@ -14,7 +14,10 @@ read salary
 
 if [ "$salary" -lt 30000 ]; then
     echo "No tax."
-elif [ "$salary" -le 40000 ]; then
+elif [ "$salary" -eq 30000 ]; then
+     tax=$((salary * 5 / 100))
+     echo "tax is 5%: $tax"
+elif [ "$salary" -le 40000 ];then
     tax=$((salary * 10 / 100))
     echo "Tax is 10%: $tax"
 else
